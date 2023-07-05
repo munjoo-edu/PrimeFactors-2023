@@ -4,14 +4,18 @@
 #include <vector>
 using namespace std;
 
-TEST(TestPrimeFactors, Of1) {
+class TestPrimeFactorsFixture :public testing::Test{
+public:
 	PrimeFactors prime_factor;
-	vector<int> expected = {};
+	vector<int> expected;
+};
+
+TEST_F(TestPrimeFactorsFixture, Of1) {
+	expected = {};
 	EXPECT_EQ(expected, prime_factor.of(1));
 }
 
-TEST(TestPrimeFactors, Of2) {
-	PrimeFactors prime_factor;
-	vector<int> expected = {2};
+TEST_F(TestPrimeFactorsFixture, Of2) {
+	expected = {2};
 	EXPECT_EQ(expected, prime_factor.of(2));
 }
