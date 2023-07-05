@@ -1,3 +1,3 @@
-## Contents
+## PrimeFactors
 ---
-content
+PrimeFactors
